@@ -1,11 +1,11 @@
 import { Path, useForm } from "react-hook-form"
 import { Data, NewData } from "../calculator.interface"
-import { inputs } from "../inputsData"
+import { inputs } from "../getInputsData"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 
 import formSchema from "./formSchema"
-import Math from "../Math"
+import useMath from "../useMath"
 
 import css from "./form.module.css"
 
@@ -21,7 +21,7 @@ const Form = (props: Props) => {
   type ExpenseFormData = z.infer<typeof schema>
 
   const onSubmit = () => {
-    props.setResultData(Math(props.inputData))
+    props.setResultData(useMath(props.inputData))
   }
 
   const {

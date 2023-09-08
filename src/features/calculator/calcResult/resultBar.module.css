@@ -1,0 +1,21 @@
+.container {
+  @apply w-full justify-center items-center flex flex-row bg-gray-900  text-gray-200 text-center;
+  div {
+    @apply w-[15%] items-center justify-center;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+}
+
+.flexWrapper {
+  @apply flex flex-col py-4 gap-5;
+}
+
+.dataContainer {
+  @apply w-full flex gap-1;
+
+  h3 {
+    @apply text-yellow-400 text-xl;
+  }
+}

@@ -5,9 +5,15 @@ interface Props {
   resultData: NewData
 }
 
+export interface ResultArray {
+  title: string
+  value: string | number
+  years?: string
+}
+
 const getResultObject = (props: Props) => {
   let currentYear = new Date().getFullYear()
-  let resultArray = [
+  let resultArray: ResultArray[] = [
     {
       title: "Year",
       value:
