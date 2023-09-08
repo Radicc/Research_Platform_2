@@ -1,0 +1,28 @@
+.container {
+  @apply flex flex-col h-full w-3/4 bg-gray-800;
+}
+
+.resultsWrapper {
+  @apply w-full justify-center items-center flex flex-row bg-gray-900  text-gray-200 text-center;
+  div {
+    @apply w-[15%] items-center justify-center;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+}
+
+.dataWrapper {
+  @apply flex flex-col items-center text-gray-200 w-[14.5%] text-xl gap-1;
+}
+.dataItem {
+  animation: itemAni 0.5s ease-in-out;
+}
+@keyframes itemAni {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
