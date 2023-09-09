@@ -1,6 +1,6 @@
 .container {
-  @apply absolute flex justify-center items-center bg-gray-700 h-3 w-1/3 opacity-0 top-0 left-1/3 z-10;
-  @apply hover:h-20 hover:opacity-95 hover:rounded-b-2xl;
+  @apply absolute flex justify-center items-center bg-gray-700 h-3 w-1/5 opacity-0 top-0 left-0 z-10;
+  @apply hover:h-20 hover:opacity-95 hover:rounded-br-2xl;
 }
 .navIcon {
   @apply w-12 cursor-pointer;

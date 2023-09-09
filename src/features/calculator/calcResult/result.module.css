@@ -1,7 +1,0 @@
-.container {
-  @apply flex flex-col h-full w-3/4 bg-gray-800;
-}
-
-.renderWrapper {
-  @apply flex py-5 overflow-y-scroll;
-}

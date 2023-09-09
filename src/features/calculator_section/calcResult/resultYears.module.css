@@ -1,0 +1,14 @@
+.container {
+  @apply flex flex-col items-center text-gray-200 w-[14.5%] text-xl gap-1;
+}
+.dataItem {
+  animation: itemAni 0.5s ease-in-out;
+}
+@keyframes itemAni {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}

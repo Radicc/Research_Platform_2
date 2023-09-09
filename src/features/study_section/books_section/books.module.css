@@ -1,0 +1,39 @@
+.container {
+  @apply p-5 flex justify-center items-center;
+}
+
+.gridWrapper {
+  @apply grid grid-cols-2 gap-2 items-center;
+}
+.bookContainer {
+  @apply flex h-full items-center gap-2 p-5  bg-slate-800;
+  animation: loadItems 0.5s ease-in-out;
+  img {
+    @apply w-1/4 rounded-sm cursor-pointer;
+  }
+
+  .flexWrapper {
+    h1 {
+      @apply py-5 text-3xl text-gray-200  text-center;
+    }
+    p {
+      @apply px-3 text-gray-200;
+    }
+
+    .difficultyWrapper {
+      @apply flex items-center gap-3 mt-5 ml-5;
+
+      h2 {
+        @apply text-gray-200 text-2xl underline;
+      }
+    }
+  }
+}
+@keyframes loadItems {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
