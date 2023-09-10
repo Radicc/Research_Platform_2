@@ -1,19 +1,19 @@
-import { BsSpeedometer } from "react-icons/bs"
+import { DataObject } from "../_layout/Study"
 
-import { booksArray } from "./booksData"
+import { BsSpeedometer } from "react-icons/bs"
 
 import css from "./books.module.css"
 
 interface Props {
-  data: any[]
+  data: DataObject | undefined
 }
 
 const Books = (props: Props) => {
   return (
     <div className={css.container}>
       <div className={css.gridWrapper}>
-        {props.data.map((book) => (
-          <div key={book.title} className={css.bookContainer}>
+        {props.data?.BooksData.map((book) => (
+          <div key={book.id} className={css.bookContainer}>
             <img src={book.srcIMG} />
             <div className={css.flexWrapper}>
               <h1>{book.title}</h1>

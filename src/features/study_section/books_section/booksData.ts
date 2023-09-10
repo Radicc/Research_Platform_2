@@ -32,5 +32,12 @@ export const booksArray = [
       "“The Intelligent Investor” is a widely acclaimed book on value investing by Benjamin Graham, first published in 19491. The book provides strategies on how to successfully use value investing in the stock market. It focuses on longer-term and more risk-averse approaches. Graham emphasizes the importance of investment principles and investors’ attitudes. He also distinguishes between investing (based on research) and speculating (based on predictions). The book teaches readers to apply Graham’s principles, aiming to protect investors from substantial harm and help them develop long-term strategies.",
     diffculty: "Advanced",
   },
+  {
+    title: "Good Stocks Cheap",
+    srcIMG: The_Intelligent_Investor,
+    paragraf:
+      "“Good Stocks Cheap” by Kenneth Jeffrey Marshall is a guide to value investing. It provides a framework integrating finance, strategy, and psychology. The book offers step-by-step guidance on fundamental analysis, understanding the difference between a company’s stock price and its worth, and identifying the right price to buy stock in a winning company.",
+    diffculty: "Intermediate",
+  },
 ]
 //Intermediate

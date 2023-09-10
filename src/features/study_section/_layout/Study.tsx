@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react"
-import { collection, getDocs } from "firebase/firestore"
-import DB from "@/config/firestore"
+import { useState } from "react"
+
+import { useQuery } from "@tanstack/react-query"
+
+import GetStudyData from "../getStudyData"
 
 import Books from "../books_section/Books"
 import Youtube from "../youtube_section/Youtube"
@@ -8,33 +10,36 @@ import Websites from "../websites_section/Websites"
 
 import css from "./study.module.css"
 
-const Study = () => {
-  const [data, setData] = useState<any[]>([])
+export interface DataObject {
+  BooksData: DataArray[]
+  YoutubeData: DataArray[]
+}
+export interface DataArray {
+  id: string
+  title: string
+  srcIMG: string
+  paragraf: string
+  diffculty: string
+}
 
-  const components = [
-    { title: "Books", component: <Books data={data} /> },
-    { title: "Youtube", component: <Youtube data={data} /> },
-    { title: "Websites", component: <Websites data={data} /> },
+const Study = () => {
+  const { getStudyData } = GetStudyData()
+
+  const { data, isLoading } = useQuery({
+    queryFn: () => getStudyData(),
+    queryKey: ["Data"],
+  })
+
+  let components = [
+    { title: "Books", component: Books },
+    { title: "Youtube", component: Youtube },
+    { title: "Websites", component: Websites },
   ]
+
   const [CurrentSection, setCurrentSection] = useState<{
     title: string
-    component: JSX.Element
-  }>(components[1])
-
-  const db = DB()
-
-  const getBooksData = async () => {
-    const querySnapshot = await getDocs(collection(db, "ReasearchPlatform"))
-    const booksData = querySnapshot.docs.map((doc) => ({
-      id: doc.id,
-      ...doc.data(),
-    }))
-    setData(booksData)
-  }
-
-  useEffect(() => {
-    getBooksData()
-  }, [])
+    component: (props: any) => JSX.Element
+  }>(components[0])
 
   return (
     <div className={css.container}>
@@ -53,7 +58,8 @@ const Study = () => {
           </button>
         ))}
       </div>
-      {CurrentSection && CurrentSection.component}
+
+      {!isLoading && <CurrentSection.component data={data} />}
     </div>
   )
 }

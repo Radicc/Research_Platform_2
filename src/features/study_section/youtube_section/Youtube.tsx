@@ -1,19 +1,19 @@
 import { BsSpeedometer } from "react-icons/bs"
 
-import { youtubeArray } from "./youtubeData"
+import { DataObject } from "../_layout/Study"
 
 import css from "./youtube.module.css"
 
 interface Props {
-  data: any[]
+  data: DataObject | undefined
 }
 
 const Youtube = (props: Props) => {
   return (
     <div className={css.container}>
       <div className={css.gridWrapper}>
-        {youtubeArray.map((channel) => (
-          <div key={channel.title} className={css.bookContainer}>
+        {props.data?.YoutubeData.map((channel) => (
+          <div key={channel.id} className={css.bookContainer}>
             <div className={css.flexWrapper}>
               <h1>{channel.title}</h1>
               <p>{channel.paragraf}</p>
