@@ -4,11 +4,15 @@ import { booksArray } from "./booksData"
 
 import css from "./books.module.css"
 
-const Books = () => {
+interface Props {
+  data: any[]
+}
+
+const Books = (props: Props) => {
   return (
     <div className={css.container}>
       <div className={css.gridWrapper}>
-        {booksArray.map((book) => (
+        {props.data.map((book) => (
           <div key={book.title} className={css.bookContainer}>
             <img src={book.srcIMG} />
             <div className={css.flexWrapper}>

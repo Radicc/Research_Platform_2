@@ -1,6 +1,10 @@
 import css from "./websites.module.css"
 
-const Websites = () => {
+interface Props {
+  data: any[]
+}
+
+const Websites = (props: Props) => {
   return <div className={css.container}>Websites</div>
 }
 

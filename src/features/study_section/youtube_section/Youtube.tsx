@@ -4,7 +4,11 @@ import { youtubeArray } from "./youtubeData"
 
 import css from "./youtube.module.css"
 
-const Youtube = () => {
+interface Props {
+  data: any[]
+}
+
+const Youtube = (props: Props) => {
   return (
     <div className={css.container}>
       <div className={css.gridWrapper}>
