@@ -21,8 +21,10 @@
     }
 
     .difficultyWrapper {
-      @apply flex items-center gap-3 mt-5 ml-5;
-
+      @apply flex justify-between items-center mt-5 mx-8;
+      div {
+        @apply flex gap-3;
+      }
       h2 {
         @apply text-gray-200 text-2xl underline;
       }

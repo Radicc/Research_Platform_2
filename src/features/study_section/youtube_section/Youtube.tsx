@@ -1,6 +1,6 @@
 import { BsSpeedometer } from "react-icons/bs"
 
-import { DataObject } from "../_layout/Study"
+import { DataObject } from "../_layout/study.interface"
 
 import css from "./youtube.module.css"
 
@@ -27,7 +27,10 @@ const Youtube = (props: Props) => {
                 <h2>{channel.diffculty}</h2>
               </div>
             </div>
-            <img src={channel.srcIMG} />
+            <img
+              src={channel.srcIMG}
+              onClick={() => window.open(channel.channelLink, "_blank")}
+            />
           </div>
         ))}
       </div>

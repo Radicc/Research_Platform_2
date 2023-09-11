@@ -10,18 +10,6 @@ import Websites from "../websites_section/Websites"
 
 import css from "./study.module.css"
 
-export interface DataObject {
-  BooksData: DataArray[]
-  YoutubeData: DataArray[]
-}
-export interface DataArray {
-  id: string
-  title: string
-  srcIMG: string
-  paragraf: string
-  diffculty: string
-}
-
 const Study = () => {
   const { getStudyData } = GetStudyData()
 
