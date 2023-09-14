@@ -9,8 +9,11 @@ export default defineConfig(({ command }) => {
     resolve: {
       alias: [{ find: "@", replacement: "/src" }],
     },
+    build: {
+      outDir: "dist",
+    },
     plugins: [tsconfigPaths()],
-    base: "/ResearchPlatform/",
+    base: "/",
   }
   return config
 })

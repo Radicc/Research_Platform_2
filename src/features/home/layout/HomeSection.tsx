@@ -5,7 +5,10 @@ const FirstSection = () => {
   return (
     <div className={css.container}>
       <div className={css.linkWrapper}>
-        <NavLink to="/Stocks" className={css.linkButton}>
+        <NavLink
+          to="/Stocks"
+          className={`${css.linkButton} pointer-events-none opacity-40`}
+        >
           <h2>Stock News</h2>
         </NavLink>
 
@@ -13,7 +16,10 @@ const FirstSection = () => {
           <h2>Study Section</h2>
         </NavLink>
 
-        <NavLink to="/Analyzer" className={css.linkButton}>
+        <NavLink
+          to="/Analyzer"
+          className={`${css.linkButton} pointer-events-none opacity-40`}
+        >
           <h2>Stocks Analyzer</h2>
         </NavLink>
 
