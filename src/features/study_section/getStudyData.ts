@@ -1,5 +1,5 @@
 import { collection, getDocs } from "firebase/firestore"
-import DB from "@/config/firestore"
+import DB from "@/config/firestore.js"
 
 const GetStudyData = () => {
   const db = DB()
