@@ -1,8 +1,6 @@
 import { collection, getDocs } from "firebase/firestore"
 import DB from "@/config/firestore"
 
-import { DataObject } from "./_layout/Study"
-
 const GetStudyData = () => {
   const db = DB()
 
@@ -23,7 +21,7 @@ const GetStudyData = () => {
       ...doc.data(),
     }))
 
-    const dataObject: DataObject = {
+    const dataObject: any = {
       BooksData: booksData,
       YoutubeData: youtubeData,
       WebsiteData: websiteData,

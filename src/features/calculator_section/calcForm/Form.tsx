@@ -36,11 +36,16 @@ const Form = (props: Props) => {
         <div key={input.id} className={css.inputWrapper}>
           <h2>{input.title}</h2>
           <input
-            className={errors[input.schemaName] && "border-2 border-red-500"}
+            className={
+              errors[input.schemaName as keyof typeof errors] &&
+              "border-2 border-red-500"
+            }
             {...register(input.schemaName as Path<ExpenseFormData>, {
               valueAsNumber: true,
             })}
-            value={props.inputData[input.schemaName]}
+            value={
+              props.inputData[input.schemaName as keyof typeof props.inputData]
+            }
             placeholder={input.placeholder}
             type="number"
             onChange={(e) => {
@@ -50,11 +55,14 @@ const Form = (props: Props) => {
               })
             }}
           />
-          {errors[input.schemaName] && !props.inputData[input.schemaName] && (
-            <p className=" absolute text-red-500 top-10 right-8">
-              {errors[input.schemaName].message}
-            </p>
-          )}
+          {errors[input.schemaName as keyof typeof errors] &&
+            !props.inputData[
+              input.schemaName as keyof typeof props.inputData
+            ] && (
+              <p className=" absolute text-red-500 top-10 right-8">
+                {errors[input.schemaName as keyof typeof errors]?.message}
+              </p>
+            )}
           {input.symbol && (
             <span className={css.inputSymbol}>{input.symbol}</span>
           )}

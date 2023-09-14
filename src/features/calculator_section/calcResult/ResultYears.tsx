@@ -12,7 +12,7 @@ const ResultYears = (props: Props) => {
       {Array(props.resultData.ExpectToLive)
         .fill(0)
         .map((x, i) => (
-          <h2 key={i} className={css.dataItem}>
+          <h2 key={i} id={x} className={css.dataItem}>
             {props.currentYear + i}
           </h2>
         ))}

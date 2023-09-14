@@ -1,4 +1,14 @@
-export const inputs = [
+export interface Inputs {
+  id: number
+  title: string
+  schemaName: string
+  info: string
+  placeholder: string
+  information: string
+  symbol: string
+}
+
+export const inputs: Inputs[] = [
   {
     id: 1,
     title: "Age",
