@@ -19,6 +19,13 @@ const Result = (props: Props) => {
     <div className={css.container}>
       <ResutlBar resultArray={resultArray} />
 
+      {!props.resultData.Data && (
+        <div className={css.informationWrapper}>
+          <h1>Inputs are empty!</h1>
+          <h2>{`<= Enter data for calculation of your future pension`}</h2>
+        </div>
+      )}
+
       {props.resultData.Data && (
         <div className={css.renderWrapper}>
           <ResultYears

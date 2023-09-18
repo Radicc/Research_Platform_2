@@ -36,6 +36,7 @@ const Form = (props: Props) => {
         <div key={input.id} className={css.inputWrapper}>
           <h2>{input.title}</h2>
           <input
+            autoComplete="off"
             className={
               errors[input.schemaName as keyof typeof errors] &&
               "border-2 border-red-500"

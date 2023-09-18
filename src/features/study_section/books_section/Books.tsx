@@ -24,7 +24,7 @@ const Books = (props: Props) => {
               <div className={css.difficultyWrapper}>
                 <div>
                   <BsSpeedometer
-                    className={css.diffcultyIcon}
+                    className={`${css.reactIcon} ${"cursor-pointer"}`}
                     size={"2.5rem"}
                     color={"gold"}
                   />
@@ -36,13 +36,13 @@ const Books = (props: Props) => {
                     onClick={() => window.open(book.amazonLink, "_blank")}
                     size={"2.5rem"}
                     color={"gold"}
-                    className={"cursor-pointer"}
+                    className={`${css.reactIcon} ${"cursor-pointer"}`}
                   />
                   <FaEbay
                     onClick={() => window.open(book.ebayLink, "_blank")}
                     size={"2.5rem"}
                     color={"gold"}
-                    className={"cursor-pointer"}
+                    className={`${css.reactIcon} ${"cursor-pointer"}`}
                   />
                 </div>
               </div>

@@ -3,30 +3,40 @@
 }
 
 .gridWrapper {
-  @apply grid grid-cols-2 gap-2 items-center;
+  @apply grid grid-cols-1 gap-2 items-center;
+  @apply lg:grid-cols-2;
 }
 .bookContainer {
-  @apply flex h-full items-center gap-2 p-5  bg-slate-800;
+  @apply flex flex-col w-full h-full items-center gap-2 py-3 bg-slate-800;
+  @apply md:flex-row md:p-5;
   animation: loadItems 0.5s ease-in-out;
   img {
-    @apply w-1/4 rounded-sm cursor-pointer;
+    @apply w-1/2 rounded-sm cursor-pointer;
+    @apply md:w-1/4;
   }
 
   .flexWrapper {
+    @apply w-full;
     h1 {
       @apply py-5 text-3xl text-gray-200  text-center;
     }
     p {
       @apply px-3 text-gray-200;
+      @apply text-sm;
     }
 
     .difficultyWrapper {
-      @apply flex justify-between items-center mt-5 mx-8;
+      @apply flex flex-col items-start mt-5 mx-8 gap-2;
+      @apply md:flex-row md:items-center md:justify-between md:gap-0;
       div {
-        @apply flex gap-3;
+        @apply flex gap-3 justify-between w-full;
+        @apply md:justify-start;
       }
       h2 {
-        @apply text-gray-200 text-2xl underline;
+        @apply text-gray-200 text-2xl underline order-1;
+      }
+      .reactIcon {
+        @apply order-2;
       }
     }
   }
