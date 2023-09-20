@@ -14,6 +14,10 @@ const Youtube = (props: Props) => {
       <div className={css.gridWrapper}>
         {props.data?.YoutubeData.map((channel) => (
           <div key={channel.id} className={css.bookContainer}>
+            <img
+              src={channel.srcIMG}
+              onClick={() => window.open(channel.channelLink, "_blank")}
+            />
             <div className={css.flexWrapper}>
               <h1>{channel.title}</h1>
               <p>{channel.paragraf}</p>
@@ -27,10 +31,6 @@ const Youtube = (props: Props) => {
                 <h2>{channel.diffculty}</h2>
               </div>
             </div>
-            <img
-              src={channel.srcIMG}
-              onClick={() => window.open(channel.channelLink, "_blank")}
-            />
           </div>
         ))}
       </div>

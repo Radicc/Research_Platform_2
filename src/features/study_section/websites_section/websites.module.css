@@ -3,18 +3,21 @@
 }
 
 .gridWrapper {
-  @apply grid grid-cols-2 gap-2 items-center;
+  @apply grid grid-cols-1 gap-2 items-center;
+  @apply lg:grid-cols-2;
 }
 .bookContainer {
-  @apply flex h-full items-center gap-2 p-5  bg-slate-800;
+  @apply flex flex-col h-full items-center gap-2 p-5  bg-slate-800;
+  @apply md:flex-row;
   animation: loadItems 0.5s ease-in-out;
   img {
-    @apply w-1/2 rounded-sm cursor-pointer;
+    @apply w-full rounded-sm cursor-pointer;
+    @apply md:w-1/2 lg:order-1;
   }
 
   .flexWrapper {
     h1 {
-      @apply py-5 text-3xl text-gray-200  text-center;
+      @apply py-5 text-3xl text-gray-200  text-center mr-5;
     }
     p {
       @apply px-3 text-gray-200;

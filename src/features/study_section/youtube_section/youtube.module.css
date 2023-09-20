@@ -6,14 +6,17 @@
   @apply grid grid-cols-1 gap-2 items-center;
 }
 .bookContainer {
-  @apply flex h-full justify-between items-center gap-2 p-5  bg-slate-800;
+  @apply flex flex-col  h-full justify-between items-center gap-2 p-5  bg-slate-800;
+  @apply lg:flex-row;
   animation: loadItems 0.5s ease-in-out;
   img {
-    @apply w-3/5 rounded-sm cursor-pointer;
+    @apply w-full rounded-sm cursor-pointer;
+    @apply md:order-2 lg:w-3/5;
   }
 
   .flexWrapper {
     @apply w-full;
+    @apply md:order-1;
     h1 {
       @apply py-5 text-4xl text-gray-200  text-center;
     }
