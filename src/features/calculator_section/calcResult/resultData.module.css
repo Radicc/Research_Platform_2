@@ -2,6 +2,8 @@
   @apply flex flex-col items-center text-gray-200 w-[14.5%] text-xl gap-1;
 }
 .dataItem {
+  @apply text-sm;
+  @apply lg:text-lg;
   animation: itemAni 0.5s ease-in-out;
 }
 @keyframes itemAni {

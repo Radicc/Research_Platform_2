@@ -1,7 +1,8 @@
 .container {
-  @apply w-full justify-center items-center flex flex-row bg-gray-900  text-gray-200 text-center;
+  @apply w-full justify-center items-center grid grid-cols-2 bg-gray-900  text-gray-200 text-center;
+  @apply lg:flex lg:flex-row;
   div {
-    @apply w-[15%] items-center justify-center;
+    @apply w-full items-center justify-center;
   }
   h2 {
     @apply text-2xl;

@@ -1,6 +1,7 @@
 .container {
-  @apply flex justify-center items-center w-full h-screen bg-gray-900;
+  @apply flex flex-col justify-center items-center w-full h-full bg-gray-900;
   animation: loadPage 0.5s ease-in-out;
+  @apply lg:flex-row lg:h-screen;
 }
 @keyframes loadPage {
   0% {

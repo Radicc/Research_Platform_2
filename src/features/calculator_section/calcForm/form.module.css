@@ -1,5 +1,6 @@
 .calcForm {
-  @apply w-1/4 flex flex-col gap-5 bg-gray-900 px-10 py-2;
+  @apply w-full flex flex-col gap-5 bg-gray-900 px-10 py-2;
+  @apply lg:w-1/4;
   .inputWrapper {
     @apply relative flex flex-col gap-1;
     h2 {
